@@ -26,7 +26,9 @@ public class EventPlanner {
         int totalbenefit = benefitDetailsdday+benefitDetailsweekday+benefitDetailsweekend+benefitDetailsSpecial+benefitDetailsGift;
         outputView.totalBenefit(totalbenefit);
         outputView.expectedAmount(totalOrderAmount,benefitDetailsdday,benefitDetailsweekday,benefitDetailsweekend,benefitDetailsSpecial);
-
+        Badge badge = new Badge();
+        String bagecategory = badge.badgeEvent(totalbenefit);
+        outputView.badge(bagecategory);
     }
 
 

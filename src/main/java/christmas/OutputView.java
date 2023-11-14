@@ -66,8 +66,9 @@ public class OutputView {
             System.out.println(total+"원");
             System.out.println();
         }
-        public  void badge(){
+        public  void badge(String bagecategory){
             System.out.println("<12월 이벤트 배지>");
+            System.out.println(bagecategory);
         }
 
 

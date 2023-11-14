@@ -20,4 +20,13 @@ public class Menu {
     public int getPrice() {
         return price;
     }
+
+    @Override
+    public String toString() {
+        return "Menu{" +
+                "name='" + name + '\'' +
+                ", category='" + category + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

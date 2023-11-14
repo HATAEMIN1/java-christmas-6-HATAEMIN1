@@ -17,12 +17,12 @@ public class EventPlanner {
         outputView.giftMenu();
         Discount discount = new Discount();
         discount.giftEvent(totalOrderAmount);
-        int benefitDetailsdday = discount.benefitDetailsdday(readDate);
-        int benefitDetailsweekday = discount.benefitDetailsweekday(readDate,input);
-        int benefitDetailsweekend = discount.benefitDetailsweekend(readDate,input);
-        int benefitDetailsSpecial= discount.benefitDetailsSpecial(readDate);
+        int benefitDetailsdday = discount.benefitDetailsdday(readDate,totalOrderAmount);
+        int benefitDetailsweekday = discount.benefitDetailsweekday(readDate,input,totalOrderAmount);
+        int benefitDetailsweekend = discount.benefitDetailsweekend(readDate,input,totalOrderAmount);
+        int benefitDetailsSpecial= discount.benefitDetailsSpecial(readDate,totalOrderAmount);
         int benefitDetailsGift = discount.benefitDetailsGift(totalOrderAmount);
-        outputView.benefit(benefitDetailsdday,benefitDetailsweekday,benefitDetailsweekend,benefitDetailsSpecial,benefitDetailsGift);
+        outputView.benefit(totalOrderAmount,benefitDetailsdday,benefitDetailsweekday,benefitDetailsweekend,benefitDetailsSpecial,benefitDetailsGift);
         int totalbenefit = benefitDetailsdday+benefitDetailsweekday+benefitDetailsweekend+benefitDetailsSpecial+benefitDetailsGift;
         outputView.totalBenefit(totalbenefit);
         outputView.expectedAmount(totalOrderAmount,benefitDetailsdday,benefitDetailsweekday,benefitDetailsweekend,benefitDetailsSpecial);
